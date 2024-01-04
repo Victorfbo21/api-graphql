@@ -1,0 +1,13 @@
+version: '1.0'
+services:
+  cadastros-graphql-api:
+    container_name: cadastros-graphql-api
+    image: cadastros-graphql-api
+    hostname: cadastros-graphql-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '4040:4040'
+    restart: always
+    command: npm run start
